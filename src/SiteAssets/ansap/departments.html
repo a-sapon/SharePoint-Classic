@@ -1,0 +1,56 @@
+﻿<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../SiteAssets/ansap/index-debug.js"></script>
+<link
+  href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="../SiteAssets/ansap/style-debug.css"
+/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<div class="dprtWrapper">
+  <h1 class="hdr">Friends comunity</h1>
+  <h3 class="greeting">
+    Welcom to our social network for Friends' fans! Do you like Friends too?
+    <a href="#register">Join us!</a>
+  </h3>
+  <p class="text">Recently joined fans:</p>
+  <div id="dprtBody" class="dprt"></div>
+  <button class="register-btn" id="register">Sign up</button>
+
+  <div id="overlay-register" class="overlay hide-modal">
+    <div class="modal">
+      <h3 class="signup-hdr">Sign up form</h3>
+
+      <div class="register-form">
+        <input type="text" name="usename" placeholder="Username" />
+        <select name="gender" id="gender">
+          <option selected="selected" disabled>Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <select name="favFriend" id="favFriend"></select>
+        <button type="button" class="signup-btn" id="signup-btn">
+          Sign up
+        </button>
+      </div>
+
+      <a href="#" data-action="close-modal" class="close-btn">
+        <svg
+          data-action="close-modal"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            data-action="close-modal"
+            d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 16.538l-4.592-4.548 4.546-4.587-1.416-1.403-4.545 4.589-4.588-4.543-1.405 1.405 4.593 4.552-4.547 4.592 1.405 1.405 4.555-4.596 4.591 4.55 1.403-1.416z"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>

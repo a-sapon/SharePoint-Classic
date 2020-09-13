@@ -1,0 +1,244 @@
+div#s4-bodyContainer {
+  background-image: linear-gradient(
+      rgba(54, 54, 54, 0.8),
+      rgba(255, 255, 255, 0.2)
+    ),
+    url(https://imgix.bustle.com/uploads/image/2018/11/2/6cc2c062-4eb0-4ebd-8e21-e63e176374fe-screen-shot-2018-11-02-at-125750-pm.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.dprtWrapper {
+  text-align: center;
+}
+
+.dprt {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  justify-content: center;
+  align-content: center;
+  grid-gap: 30px;
+  margin-bottom: 20px;
+}
+
+.dprtCard,
+.dprtCardOffline {
+  text-align: center;
+  width: 250px;
+  height: 200px;
+  padding-top: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.dprtCard::after,
+.dprtCardOffline::after {
+  content: '';
+  display: block;
+  width: 36%;
+  height: 200%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: -5px 0 0 -5px;
+  transform-origin: 0 0;
+  transform: rotate(-60deg);
+  transition: all 300ms;
+}
+
+.dprtCard::after {
+  background: #05a505;
+}
+.dprtCardOffline::after {
+  background-color: #707070;
+}
+
+.dprtCard__img {
+  height: 30%;
+}
+
+.dprtCard__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 18px;
+  margin: 0;
+}
+
+.isOnline {
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  right: 8px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.favFriend {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+.favFriend span:nth-child(1) {
+  max-width: 100px;
+  text-align: left;
+}
+.favFriend span:nth-child(2) {
+  font-weight: 500;
+}
+
+h1.hdr,
+h3.signup-hdr {
+  font-family: 'Permanent Marker', cursive;
+  color: #ffffff;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.greeting {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 350px;
+  color: #ffffff;
+}
+
+.greeting a {
+  color: #cca1f5;
+  text-decoration: underline;
+  transition: color 300ms;
+}
+
+.greeting a:hover {
+  color: #8a2be2;
+}
+
+.text {
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 2px;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 10px;
+  color: #ffffff;
+  padding-left: 50px;
+}
+
+button.register-btn {
+  width: 130px;
+  height: 50px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
+  background-color: #cca1f5;
+  transition: background-color 300ms;
+}
+
+button.register-btn:hover {
+  background-color: #8a2be2;
+}
+
+/* Sign-up MODAL */
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
+}
+
+.hide-modal {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+  transform: scale(1);
+}
+
+.modal {
+  padding: 24px;
+  border-radius: 4px;
+  max-width: 380px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #444444;
+  text-align: center;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px, 1px, -1px rgba(0, 0, 0, 0.12);
+  transform: scale(1.1);
+  transition: transform 200ms ease-in-out;
+  position: relative;
+}
+
+.register-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.register-form input,
+.register-form select {
+  padding: 8px 0 8px 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #444444;
+  margin-bottom: 16px;
+}
+.register-form input:focus {
+  outline: none;
+}
+
+h3.signup-hdr {
+  color: #333333;
+}
+
+.signup-btn {
+  padding: 10px 0;
+  font-size: 16px;
+  background-color: #cca1f5;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+.signup-btn:hover {
+  background-color: #8a2be2;
+}
+.signup-btn:focus {
+  outline: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  fill: #444444;
+  transition: fill 200ms ease-in-out, transform 200ms ease-in-out;
+}
+.close-btn:hover {
+  fill: #333333;
+  transform: scale(1.1);
+}
